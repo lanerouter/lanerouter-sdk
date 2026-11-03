@@ -1,0 +1,26 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.lanerouter/lanerouter",
+  "title": "LaneRouter",
+  "description": "Live road conditions for the agent web: check a site or API before acting, report after.",
+  "websiteUrl": "https://lanerouter.com",
+  "repository": {
+    "url": "https://github.com/lanerouter/lanerouter-sdk",
+    "source": "github"
+  },
+  "version": "0.8.8",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://lanerouter.com/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Bearer lr_… key from lanerouter.com/connect. Optional for check_road and red_lights; needed to report and watch.",
+          "isRequired": false,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}

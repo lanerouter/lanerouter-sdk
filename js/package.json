@@ -1,0 +1,20 @@
+{
+  "name": "lanerouter",
+  "version": "0.2.0",
+  "description": "Live road conditions for the agent web. Check a website or API before your agent acts, report what happened after.",
+  "homepage": "https://lanerouter.com",
+  "license": "MIT",
+  "type": "module",
+  "main": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "default": "./src/index.js"
+    }
+  },
+  "files": ["src", "README.md", "LICENSE"],
+  "engines": { "node": ">=18" },
+  "keywords": ["ai-agents", "agents", "mcp", "model-context-protocol", "fetch", "rate-limit", "agent-infrastructure"],
+  "scripts": { "test": "node --test test/*.test.js" }
+}
