@@ -73,6 +73,31 @@ Outcomes: `clear`, `slow`, `rate_limited`, `wall`, `changed`, `broken`.
 Detours are legitimate routes only: `official_api`, `alternate_endpoint`, `wait_and_retry`,
 `hand_to_human`, `different_provider`. Ways around a site's blocking are refused.
 
+## Vercel AI SDK tools
+
+Give the model LaneRouter as tools, so it checks a road before acting and reports after.
+
+```
+npm install lanerouter ai
+```
+
+```js
+import { generateText, gateway, isStepCount } from 'ai'
+import { laneRouterTools } from 'lanerouter/ai'
+
+const { text } = await generateText({
+  model: gateway('openai/gpt-5-mini'),
+  prompt: 'Before you book, check whether opentable.com/booking is working for agents.',
+  tools: laneRouterTools(),
+  stopWhen: isStepCount(5)
+})
+```
+
+`laneRouterTools()` returns `checkRoad`, `redLights` and, when `LANEROUTER_KEY` is set, `reportRoad`.
+Each is also exported on its own: `checkRoad()`, `reportRoad()`, `redLights()`. They take the same
+`key`, `endpoint` and `framework` options, and send only the road, never the full URL.
+Needs `ai` 5 or later.
+
 ## Watch a road
 
 Get a signed webhook when a road turns green, amber or red. `watch.secret` is returned once, so store it.

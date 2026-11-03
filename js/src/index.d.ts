@@ -111,3 +111,5 @@ export declare function classify(input: { status: number; latencyMs?: number; bo
 export declare const OUTCOMES: Outcome[]
 export declare const DETOUR_KINDS: DetourKind[]
 export default LaneRouter
+export declare const VERSION: string
+export declare const DEFAULT_ENDPOINT: string

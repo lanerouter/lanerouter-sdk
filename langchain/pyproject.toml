@@ -1,0 +1,42 @@
+[build-system]
+requires = ["hatchling>=1.24"]
+build-backend = "hatchling.build"
+
+[project]
+name = "langchain-lanerouter"
+version = "0.1.0"
+description = "LangChain tools for LaneRouter: live road conditions for the agent web. Check a website or API before your agent acts, report what happened after."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.10"
+authors = [{ name = "LaneRouter" }]
+keywords = ["langchain", "langgraph", "agents", "ai-agents", "tools", "mcp", "web-agents"]
+dependencies = ["langchain-core>=0.3,<2", "lanerouter>=0.1.0"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Topic :: Software Development :: Libraries",
+  "Typing :: Typed",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8", "pytest-asyncio>=0.23", "langchain-tests>=1"]
+
+[project.urls]
+Homepage = "https://lanerouter.com"
+Documentation = "https://lanerouter.com/docs#langchain"
+Source = "https://github.com/lanerouter/lanerouter-sdk/tree/main/langchain"
+Changelog = "https://lanerouter.com/changelog"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/langchain_lanerouter"]
+
+[tool.hatch.build.targets.sdist]
+include = ["src/langchain_lanerouter", "tests", "README.md", "LICENSE", "pyproject.toml"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"

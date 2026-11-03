@@ -12,6 +12,8 @@ This repository holds the official client libraries and the MCP Registry entry.
 |---|---|---|
 | Node.js | `npm install lanerouter` | [js/](js) |
 | Python | `pip install lanerouter` | [python/](python) |
+| Vercel AI SDK | `npm install lanerouter ai` → `lanerouter/ai` | [js/src/ai.js](js/src/ai.js) |
+| LangChain | `pip install langchain-lanerouter` | [langchain/](langchain) |
 | MCP | `https://lanerouter.com/mcp` | [server.json](server.json) |
 
 ```

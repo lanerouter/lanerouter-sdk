@@ -1,5 +1,5 @@
-const DEFAULT_ENDPOINT = 'https://lanerouter.com'
-const VERSION = '0.2.0'
+export const DEFAULT_ENDPOINT = 'https://lanerouter.com'
+export const VERSION = '0.3.0'
 
 const OPAQUE = [
   /^\d+$/,

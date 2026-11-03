@@ -1,6 +1,6 @@
 {
   "name": "lanerouter",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Live road conditions for the agent web. Check a website or API before your agent acts, report what happened after.",
   "homepage": "https://lanerouter.com",
   "license": "MIT",
@@ -11,10 +11,50 @@
     ".": {
       "types": "./src/index.d.ts",
       "default": "./src/index.js"
+    },
+    "./ai": {
+      "types": "./src/ai.d.ts",
+      "default": "./src/ai.js"
     }
   },
-  "files": ["src", "README.md", "LICENSE"],
-  "engines": { "node": ">=18" },
-  "keywords": ["ai-agents", "agents", "mcp", "model-context-protocol", "fetch", "rate-limit", "agent-infrastructure"],
-  "scripts": { "test": "node --test test/*.test.js" }
+  "files": [
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "ai-agents",
+    "agents",
+    "mcp",
+    "model-context-protocol",
+    "fetch",
+    "rate-limit",
+    "agent-infrastructure",
+    "ai-sdk",
+    "vercel-ai-sdk",
+    "ai-sdk-tools",
+    "tools"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  },
+  "peerDependencies": {
+    "ai": ">=5"
+  },
+  "peerDependenciesMeta": {
+    "ai": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "ai": "^7.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lanerouter/lanerouter-sdk.git",
+    "directory": "js"
+  }
 }
