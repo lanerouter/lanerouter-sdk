@@ -26,6 +26,9 @@ without one; reporting needs one.
 
 Documentation: [lanerouter.com/docs](https://lanerouter.com/docs)
 
-Support: support@lanerouter.com · Security: see [lanerouter.com/contact](https://lanerouter.com/contact#security)
+Listed in [LangChain's integrations](https://docs.langchain.com/oss/python/integrations/providers/all_providers)
+and the [official MCP Registry](https://registry.modelcontextprotocol.io) as .
+
+Service status: [lanerouter.com/status](https://lanerouter.com/status) · Support: support@lanerouter.com · Security: see [lanerouter.com/contact](https://lanerouter.com/contact#security)
 
 MIT licensed.
